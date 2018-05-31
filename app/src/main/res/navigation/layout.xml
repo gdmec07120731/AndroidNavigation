@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/pageOne">
+
+
+    <fragment
+        android:id="@+id/pageOne"
+        android:name="com.ppjun.android.androidnavigation.OneFragment"
+        android:label="fragment_page1"
+        tools:layout="@layout/one_ui">
+        <action
+            android:id="@+id/action_two"
+            app:destination="@id/pageTwo"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/pageTwo"
+        android:name="com.ppjun.android.androidnavigation.TwoFragment"
+        android:label="twone"
+        tools:layout="@layout/two_ui">
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_one"
+            app:destination="@id/pageOne" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_three"
+            app:destination="@id/pageThree" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/pageThree"
+        android:name="com.ppjun.android.androidnavigation.ThreeFragment"
+        android:label="three"
+        tools:layout="@layout/three_ui">
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_three"
+            app:destination="@id/pageThree" />
+    </fragment>
+
+</navigation>
