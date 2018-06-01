@@ -25,13 +25,15 @@
         android:name="com.ppjun.android.androidnavigation.TwoFragment"
         android:label="twone"
         tools:layout="@layout/two_ui">
+     <!-- app:popUpto="@+id/pageOne" app:destination="@id/pageOne"-->
         <action
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             android:id="@+id/action_one"
-            app:destination="@id/pageOne" />
+            app:popUpTo="@id/pageOne"
+           />
         <action
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
